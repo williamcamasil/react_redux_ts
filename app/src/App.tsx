@@ -12,8 +12,8 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         {stock.counter}
-        {/* <button onClick={() => dispatch(increment())}>Somar</button> */}
-        <button onClick={() => dispatch(asyncIncrement())}>Somar</button>
+        {/* <button onClick={() => dispatch(increment(1))}>Somar</button> */}
+        <button onClick={() => dispatch(asyncIncrement(2))}>Somar</button>
         <button onClick={() => dispatch(decrement())}>Subtrair</button>
       </header>
     </div>

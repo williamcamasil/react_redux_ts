@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { AppDispatch, AppThunk } from "."
 
 const stock = createSlice({
@@ -7,8 +7,9 @@ const stock = createSlice({
         counter: 0
     },
     reducers: {
-        increment (state) {
-            state.counter += 1
+        //passando um payload para o método
+        increment (state, action: PayloadAction<number>) {
+            state.counter += action.payload
         },
         decrement (state) {
             state.counter -= 1
@@ -19,15 +20,19 @@ const stock = createSlice({
 export const { increment, decrement } = stock.actions
 export default stock.reducer
 
+
+//-----------------ASYNC AWAIT
+
+
 function sleep(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 //Ações assincronas
-export function asyncIncrement (): AppThunk {
+export function asyncIncrement (amount: number): AppThunk {
     return async function (dispatch: AppDispatch) {
         await sleep(3000)
-        dispatch(increment())
+        dispatch(increment(amount))
     }
 }
 
