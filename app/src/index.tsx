@@ -1,16 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
 import "./index.css";
-import App from "./App";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
 import store from "./store/index";
 import { Provider } from "react-redux";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
+const rootElement = document.getElementById("root");
+render(
+  <BrowserRouter>
     <Provider store={store}>
-      <App />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+      </Routes>
     </Provider>
-    ,
-  </React.StrictMode>,
-  document.getElementById("root")
+  </BrowserRouter>,
+  rootElement
 );

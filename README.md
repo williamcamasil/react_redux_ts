@@ -1,6 +1,6 @@
 # react_redux_ts
 
-
+## React Redux Toolkit
 
 ```
 # create app using typescript
@@ -11,6 +11,9 @@ yarn add @reduxjs/toolkit
 
 # install redux
 yarn add react-redux
+
+# router pages
+yarn add react-router-dom
 ```
 
 
@@ -42,6 +45,8 @@ src
 - [create app with ts](https://create-react-app.dev/docs/adding-typescript/)
 
 - [explicação - conteúdo](https://www.youtube.com/watch?v=mT8nFaFyJnw)
+- [Rotas](https://yarnpkg.com/package/react-router-dom)
+  - [doc](https://github.com/remix-run/react-router/blob/main/docs/getting-started/tutorial.md)
 
 
 
