@@ -5,6 +5,12 @@
 ```
 # create app using typescript
 yarn create react-app my-app --template typescript
+
+# install redux toolkit
+yarn add @reduxjs/toolkit
+
+# install redux
+yarn add react-redux
 ```
 
 
