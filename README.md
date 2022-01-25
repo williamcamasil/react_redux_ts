@@ -21,3 +21,7 @@ yarn add react-redux
 
 - [create app with ts](https://create-react-app.dev/docs/adding-typescript/)
 
+- [explicação - conteúdo](https://www.youtube.com/watch?v=mT8nFaFyJnw)
+
+
+
